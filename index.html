@@ -1,0 +1,253 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phishing Awareness Training</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Phishing Awareness Training</h1>
+        <p>Think Before You Click: Stay Safe Online</p>
+    </header>
+
+    <nav aria-label="Main navigation">
+        <a href="#learn">Learn</a>
+        <a href="#warning-signs">Warning Signs</a>
+        <a href="#example">Email Example</a>
+        <a href="#quiz">Quiz</a>
+    </nav>
+
+    <main>
+        <section id="learn" class="card">
+            <h2>What Is Phishing?</h2>
+            <p>
+                Phishing is a cyberattack in which criminals pretend to be
+                trustworthy people or organizations to trick people into
+                revealing sensitive information or opening malicious links.
+            </p>
+            <h3>Common Types</h3>
+            <ul>
+                <li><strong>Email phishing:</strong> Fraudulent emails.</li>
+                <li><strong>Spear phishing:</strong> Targeted messages aimed
+                    at a particular person or organization.</li>
+                <li><strong>Smishing:</strong> Phishing through SMS messages.</li>
+                <li><strong>Vishing:</strong> Phishing through phone calls.</li>
+            </ul>
+        </section>
+
+        <section id="warning-signs" class="card">
+            <h2>How to Recognize Phishing</h2>
+            <ul>
+                <li>Unexpected messages asking for passwords or payments.</li>
+                <li>Urgent threats that pressure you to act immediately.</li>
+                <li>Sender addresses that do not match the real organization.</li>
+                <li>Unexpected attachments or suspicious links.</li>
+                <li>Spelling mistakes or unusual requests.</li>
+            </ul>
+            <p><strong>Safety tip:</strong> Verify requests through a trusted
+                channel before clicking links or sharing information.</p>
+        </section>
+
+        <section id="example" class="card">
+            <h2>Example of a Suspicious Email</h2>
+            <div class="email-example">
+                <p><strong>From:</strong> security@example-suspicious.test</p>
+                <p><strong>Subject:</strong> Urgent! Your account will close!</p>
+                <p>
+                    Your account has a problem. Click the link immediately
+                    to prevent it from being closed.
+                </p>
+                <p><strong>Training link:</strong> [Fictional link omitted]</p>
+            </div>
+            <h3>Red Flags</h3>
+            <ul>
+                <li>Creates fear and urgency.</li>
+                <li>Uses an unfamiliar sender address.</li>
+                <li>Pressures the recipient to click without verifying.</li>
+            </ul>
+            <p>This is a fictional training example. Do not click unexpected
+                links in real messages.</p>
+        </section>
+
+        <section class="card">
+            <h2>How to Stay Safe</h2>
+            <ul>
+                <li>Check the sender's full email address.</li>
+                <li>Visit official websites directly instead of using
+                    unexpected links.</li>
+                <li>Enable multifactor authentication (MFA).</li>
+                <li>Keep software and security tools updated.</li>
+                <li>Report suspicious messages to your IT or security team.</li>
+            </ul>
+        </section>
+
+        <section id="quiz" class="card">
+            <h2>Test Your Knowledge</h2>
+            <p id="question">Question will appear here.</p>
+            <div id="answers" class="answers"></div>
+            <p id="feedback" role="status" aria-live="polite"></p>
+            <button id="next-button" type="button" hidden>
+                Next Question
+            </button>
+            <p id="score"></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Cybersecurity Awareness Project | CodeAlpha Task 2</p>
+        <p>Educational use only. No credentials or personal information
+            are collected.</p>
+    </footer>
+</body>
+</html>
+
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f1f5f9;
+    color: #1e293b;
+    line-height: 1.6;
+}
+
+header {
+    background: #12345a;
+    color: white;
+    text-align: center;
+    padding: 35px 20px;
+}
+
+header h1 {
+    margin: 0 0 8px;
+    font-size: 2rem;
+}
+
+header p {
+    margin: 0;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 15px;
+    background: #0f172a;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    max-width: 950px;
+    margin: 25px auto;
+    padding: 0 18px;
+}
+
+.card {
+    background: white;
+    padding: 24px;
+    margin-bottom: 22px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(15, 23, 42, 0.08);
+    border: 1px solid #e2e8f0;
+}
+
+h2 {
+    color: #12345a;
+    margin-top: 0;
+}
+
+h3 {
+    color: #334155;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+.email-example {
+    background: #fff7ed;
+    border-left: 5px solid #ea580c;
+    padding: 15px;
+    overflow-wrap: anywhere;
+}
+
+.answers {
+    display: grid;
+    gap: 10px;
+    margin: 15px 0;
+}
+
+.answers button,
+#next-button {
+    padding: 12px 16px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    background: #eff6ff;
+    color: #12345a;
+    text-align: left;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.answers button:hover,
+#next-button:hover {
+    background: #dbeafe;
+}
+
+.answers button:disabled {
+    cursor: default;
+    opacity: 0.85;
+}
+
+#next-button {
+    background: #12345a;
+    color: white;
+    border-color: #12345a;
+}
+
+#feedback {
+    font-weight: bold;
+}
+
+footer {
+    text-align: center;
+    background: #0f172a;
+    color: white;
+    padding: 22px 15px;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 1.6rem;
+    }
+
+    nav {
+        gap: 12px;
+    }
+
+    .card {
+        padding: 17px;
+    }
+}
